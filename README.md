@@ -1,4 +1,5 @@
 # Total-Cloud-Coverage-prediction-
+<h>Dataset</h>
 The main aim of this project was with a given dataset, we had to predict the total cloud coverage in the sky for next 30,60,90 and 120 minutes. The dataset for this project was very imbalanced, so we had to first remove the problems in it.
 In the csv file, we had two problems.. 
 i.) For "total cloud cover (%) column", we had some rows with negative value which was unfeasible and some with value -7999 which was also unfeasible as the % can't be negative. And the total quantity of negative values was large and we couldn't just drop every one of them which would have been a huge data loss. Appearence of all negative values except -7999 was non-uniform. And we had no option other than dropping all of them and for -7999, we had an option. -7999 appeared in triplet form wherever it appeared in the csv file. So we replaced -7999 everywhere in a given triplet with the average of value from row just above the triplet and just after the triplet.
