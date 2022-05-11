@@ -8,3 +8,9 @@ We normalized the dataset as well to avoid gradient related issues.</p>
 <h1> Model to be used for training </h1>
 <p>Next, as we can see the task was to predict in time series and the most suitable model we could use was lstm. So we created one lstm model using Pytorch.</p>
 <p>The first layer was lstm layer with n_features=13, n_hidden=40 and n_layers =3. The values obtained by trying different architectures. Then we used one linear layer with ReLU as activation function and then one more linear layer.</p>
+<h1>Dataset for training</h1>
+<p> Now, we had dataset which couldn't be fed directly to the model and we had to do bit of preprocessing before being fed into the model. So we created a seq function to return time series data and the data we got could be directly fed into the model.</p>
+<h1> Training and testing </h1>
+<p>Now we got the time series data, we used this data to train the model and we used Adam optimizer and lr_scheduler to basically train and optimize the parameters and also schedule proper learning.</p>
+<p>And then in the same way, we preprocessed the testing data and fed it into the trained model.</p>
+<p>Also as desired, we creating a csv file for storing the output that we got from the testing data(output at 30, 60, 90 and 120 time horizon) and which was the desired format of submission.</p>
